@@ -1,37 +1,61 @@
-PREDICTIVE MODELING USING MACHINE LEARNING
-Student Performance Prediction
-
-Student Name: AMAN KANT KUMAR
-Course/Internship: Data Science Internship
+EXPLORATORY DATA ANALYSIS (EDA) PROJECT
+Student Performance Dataset
 
 1. INTRODUCTION
-In this project, I worked on a simple machine learning problem related to student performance. The purpose was to build a model that can predict whether a student may pass or fail using a few basic academic features.
+This project is made as a simple Exploratory Data Analysis (EDA) project for a Data Science internship. The main purpose is to explore a student performance dataset and understand the patterns in the data before applying any machine learning model.
 
 2. OBJECTIVE
-The main objective is to apply supervised machine learning and understand the process of training, testing and evaluating a predictive model.
+The objectives of this project are:
+- To understand the structure of the dataset.
+- To check missing and duplicate values.
+- To calculate basic statistical summaries.
+- To study correlations between important numerical columns.
+- To create simple visualizations.
+- To write a few useful observations from the analysis.
 
 3. DATASET
-I used a small student performance dataset. It contains study hours, attendance percentage and previous score as input features. The target column is Passed, where 1 means Pass and 0 means Fail.
+The dataset contains academic information of students. The main columns are:
+- Study_Hours: approximate study hours.
+- Attendance_Percent: attendance percentage.
+- Previous_Score: previous academic score.
+- Passed: whether the student passed (Yes/No).
 
-4. DATA PREPARATION
-First, I loaded the CSV file using Pandas. I selected the three input columns and separated the target column. The dataset was divided into training and testing data using an 80:20 ratio.
+The dataset is a small synthetic dataset prepared for academic demonstration. It is not real student data.
 
-5. MACHINE LEARNING MODELS
-I used two classification algorithms:
-- Decision Tree Classifier
-- Random Forest Classifier
+4. DATA QUALITY CHECK
+During the first check, a few missing values and duplicate rows were found intentionally so that basic preprocessing could be demonstrated.
+Missing numerical values were filled using the median of the respective column. Duplicate rows were removed before the final analysis.
 
-Decision Tree is easy to understand because it makes decisions using conditions. Random Forest combines many decision trees and can usually give more stable predictions.
+5. STATISTICAL SUMMARY
+The dataset was examined using count, mean, standard deviation, minimum, quartiles and maximum values. These summaries help understand the normal range of study hours, attendance and previous scores.
 
-6. MODEL EVALUATION
-I used accuracy score and classification report to compare the models. I also created a confusion matrix for the Random Forest model. A ROC curve was generated to understand the classification performance at different thresholds.
+6. CORRELATION ANALYSIS
+Correlation was checked for Study_Hours, Attendance_Percent and Previous_Score. A positive correlation means that the two variables generally increase together, while a negative value means they tend to move in opposite directions.
 
-7. RESULT
-The models produced reasonable predictions on the test data. The exact accuracy is printed when the Python file is run, so the result can be reproduced instead of manually entering a fixed value.
+In this sample, study hours and previous score show a positive relationship. Attendance also has a positive relationship with previous score, although the relationship is not perfect.
 
-8. CONCLUSION
-This project gave me practical experience with supervised machine learning. I learned how to load a dataset, select features, split data, train classification models and evaluate their performance using accuracy, confusion matrix and ROC curve.
+7. VISUALIZATIONS
+The following charts were created:
+- Study Hours Distribution
+- Study Hours vs Previous Score
+- Correlation Bar Chart
+- Students by Pass Outcome
 
-9. FUTURE IMPROVEMENT
-In future, I can use a larger real-world dataset, perform more detailed data cleaning, tune model parameters and compare more algorithms.
+8. KEY OBSERVATIONS
+- Most students in the sample study for a moderate number of hours.
+- Students with higher study hours generally tend to have better previous scores in this sample.
+- Attendance and previous score also show a positive relationship.
+- The pass outcome is not the same for every student, which gives a useful target for further analysis.
+- Correlation shows association, not proof that one variable directly causes another.
 
+9. LIMITATIONS
+This is a small synthetic dataset created for learning purposes. Therefore, the observations should not be treated as conclusions about real students. A larger real-world dataset could give different results.
+
+10. CONCLUSION
+The EDA helped in understanding the dataset before modeling. Missing values and duplicates were checked, statistical summaries were calculated, correlations were studied, and charts were created. This project improved my understanding of how data can be explored and interpreted using Python, Pandas and Matplotlib.
+
+Tools Used:
+Python
+Pandas
+NumPy
+Matplotlib
